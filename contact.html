@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra-Clone</title>
+
+    <!--Google Font - Poppins(400)-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--Style Link-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--Tailwind CDN Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+
+    <nav class="flex justify-between m-4 sticky top-0 z-10 bg-white pt-3 pb-3">
+        <h1 class="text-3xl font-extrabold">Nostra</h1>
+
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-7 h-7 text-gray-900 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class=" hidden md:flex gap-10 text-xl">
+            <li class="hover:underline"><a href="index.html">Home</a></li>
+            <li class="hover:underline"><a href="">New Arrival</a></li>
+            <li class="hover:underline"><a href="#">Most Wanted</a></li>
+            <li class="hover:underline"><a href="collection.html">Collections</a></li>
+            <li class="hover:underline"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!--Side Navigation Bar-->
+
+    <section id="sideNav" class="bg-gray-900 text-white fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; left: -50%;">
+        <div  class="text-right p-5">
+            <p id="closeNav" class=" inline cursor-pointer">x</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center">
+            <li class="hover:underline"><a href="index.html">Home</a></li>
+            <li class="hover:underline"><a href="">New Arrival</a></li>
+            <li class="hover:underline"><a href="#">Most Wanted</a></li>
+            <li class="hover:underline"><a href="collection.html">Collections</a></li>
+            <li class="hover:underline"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+    <!--Contact Form-->
+
+    <section class="m-4 mx-10 bg-gray-900 text-white p-10">
+        <h1 class="text-4xl font-extrabold mb-10">Contact Us</h1>
+        <form action="">
+            <label for="" class="flex gap-11 text-xl items-center mb-2">Name: </label> <input type="text"
+                placeholder="Enter your Name" class="w-full p-2 rounded-lg"> <br><br>
+            <label for="" class="flex gap-12 text-xl items-center mb-2">Email: </label> <input type="text"
+                placeholder="Enter your email" class="w-full p-2 rounded-lg"><br><br>
+            <label for="" class="flex gap-5 text-xl items-center mb-2">Message: </label> <textarea placeholder="Your Message...." class="w-full p-2 rounded-lg"></textarea><br><br>
+            <button class="bg-blue-700 p-2 rounded-lg hover:bg-blue-900">Submit</button>
+        </form>
+    </section>
+
+
+    <!--News Letter-->
+
+     <section class="text-center m-4">
+        <h1 class="mb-4 text-4xl font-extrabold">Join our News Letter</h1>
+        <p class="mb-4">Signup for our email newspaper to get exculsive discounts, updated, and more</p>
+        <input type="text" name="" id="" class=" border-gray-900 w-4/6 mb-4 border-4 p-2"> <br>
+        <button class="bg-gray-900 p-2 text-white rounded-xl">Subscribe →</button>
+    </section>
+
+    <!--Footer-->
+
+    <section class="bg-gray-900 text-white p-5">
+        <h1 class="text-2xl font-bold mb-5">Nostra</h1>
+        <p class="md:text-xl text-base font-medium mb-5">The Standard chunk of Lorem ipsum used since the 1500s is
+            reprodused below for those interest</p>
+
+        <div class="flex gap-5 mb-5">
+            <i class="fa-brands fa-instagram" style="color: white;"></i>
+            <i class="fa-brands fa-twitter" style="color: white;"></i>
+            <i class="fa-brands fa-facebook-f" style="color: white;"></i>
+        </div>
+
+        <p class="md:text-xl text-base font-medium mb-5">@ 2023 Nostra.com</p>
+    </section>
+
+    <script src="contact.js"></script>
+
+</body>
+
+</html>

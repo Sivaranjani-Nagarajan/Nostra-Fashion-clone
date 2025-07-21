@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra-Clone</title>
+
+    <!--Google Font - Poppins(400)-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--Style Link-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--Tailwind CDN Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!--SignUp Offer-->
+
+    <div id="signUp" class="bg-gray-900 text-white flex justify-center gap-1 p-2 text-lg">
+        Sign Up and <strong>GET 20% OFF</strong> for your First Order
+        <button id="closeBtn" class="absolute right-5 top-2 font-bold">x</button>
+    </div>
+
+    <!--Navigation Bar-->
+
+    <nav class="flex justify-between m-4 sticky top-0 z-10 bg-white pt-3 pb-3">
+        <h1 class="text-3xl font-extrabold">Nostra</h1>
+
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-7 h-7 text-gray-900 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class=" hidden md:flex gap-10 text-xl">
+            <li class="hover:underline"><a href="index.html">Home</a></li>
+            <li class="hover:underline"><a href="">New Arrival</a></li>
+            <li class="hover:underline"><a href="#">Most Wanted</a></li>
+            <li class="hover:underline"><a href="collection.html">Collections</a></li>
+            <li class="hover:underline"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!--Side Navigation Bar-->
+
+    <section id="sideNav" class="bg-gray-900 text-white fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; left: -50%;">
+        <div  class="text-right p-5">
+            <p id="closeNav" class=" inline cursor-pointer">x</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center">
+            <li class="hover:underline"><a href="index.html">Home</a></li>
+            <li class="hover:underline"><a href="">New Arrival</a></li>
+            <li class="hover:underline"><a href="#">Most Wanted</a></li>
+            <li class="hover:underline"><a href="collection.html">Collections</a></li>
+            <li class="hover:underline"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+    <!--Filters-->
+    <div class="flex">
+
+        <div>
+            <!--Occasion Filter-->
+
+            <aside class="border-r-4 border-gray-900 p-10 max-w-sm">
+
+                <section class="m-4">
+                    <h1 class="text-xl md:text-2xl font-bold mb-2">Occasion</h1>
+                    <h3 class="text-lg md:text-xl font-medium flex"><input type="checkbox" data-type="occasion" value="Summer" class="filter-checkbox m-2">Summer</h3>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox" data-type="occasion" value="Party" class="filter-checkbox m-2">Party</h3>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox" data-type="occasion" value="Beach" class="filter-checkbox m-2">Beach</h3>
+                </section>
+
+                <!--Colours Filer-->
+
+                <section class="m-4">
+                    <h1 class="text-xl md:text-2xl font-bold mb-2">Colours</h1>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox"  data-type="colours" value="Red" class="filter-checkbox m-2">Red</h3>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox" data-type="colours" value="Blue" class="filter-checkbox m-2">Blue</h3>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox" data-type="colours" value="Green" class="filter-checkbox m-2">Green</h3>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox" data-type="colours" value="Black" class="filter-checkbox m-2">Black</h3>
+                </section>
+
+                <!--Arrivals-->
+
+                <section class="m-4">
+                    <h1 class="text-xl md:text-2xl font-bold mb-2">Arrivals</h1>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox"  data-type="arrival" value="New" class="filter-checkbox m-2">New</h3>
+                    <h3 class="text-lg md:text-xl font-medium"><input type="checkbox" data-type="arrival" value="Old" class="filter-checkbox m-2">Old</h3>
+                </section>
+
+            </aside>
+
+        </div>
+
+        <!--Search Box-->
+
+        <div class="m-10">
+
+            <div class=" flex justify-between border rounded-full p-2 w-full mb-5">
+                <input type="text" placeholder="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+
+            </div>
+
+            <!--Collections-->
+
+            <section class="grid grid-cols-2 md:grid-cols-3 gap-5 text-center">
+                <div class="collection-item" data-occasion="Summer" data-colour="Blue" data-arrival="New">
+                    <img src="./images/f1.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Floral Summer Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 499</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Party" data-colour="Green" data-arrival="New">
+                    <img src="./images/summergreen.jpg" alt="summergreen">
+                    <h1 class="font-bold text-sm md:text-xl">Floral Party Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 299</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Beach" data-colour="Red" data-arrival="New">
+                    <img src="./images/Party Red.jpg" alt="partyred">
+                    <h1 class="font-bold text-sm md:text-xl">Floral Beach Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 399</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Summer" data-colour="Blue" data-arrival="New">
+                    <img src="./images/f1.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Summer Blue Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 299</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Party" data-colour="White" data-arrival="New">
+                    <img src="./images/summer white.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Party White Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 399</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Beach" data-colour="Blue" data-arrival="New">
+                    <img src="./images/beach blue.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Beach Blue Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 499</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Summer" data-colour="Red" data-arrival="New">
+                    <img src="./images/party-red.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Summer Red Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 299</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Party" data-colour="Red" data-arrival="New">
+                    <img src="./images/party.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Party Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 299</p>
+                </div>
+
+                <div class="collection-item" data-occasion="Beach" data-colour="Blue" data-arrival="New">
+                    <img src="./images/f1.jpg" alt="f1">
+                    <h1 class="font-bold text-sm md:text-xl">Floral Beach Shirt</h1>
+                    <p class="font-bold text-sm md:text-xl">₹ 499</p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <!--News Letter-->
+
+     <section class="text-center m-4">
+        <h1 class="mb-4 text-4xl font-extrabold">Join our News Letter</h1>
+        <p class="mb-4">Signup for our email newspaper to get exculsive discounts, updated, and more</p>
+        <input type="text" name="" id="" class=" border-gray-900 w-4/6 mb-4 border-4 p-2"> <br>
+        <button class="bg-gray-900 p-2 text-white rounded-xl">Subscribe →</button>
+    </section>
+
+    <!--Footer-->
+
+    <section class="bg-gray-900 text-white p-5">
+        <h1 class="text-2xl font-bold mb-5">Nostra</h1>
+        <p class="md:text-xl text-base font-medium mb-5">The Standard chunk of Lorem ipsum used since the 1500s is
+            reprodused below for those interest</p>
+
+        <div class="flex gap-5 mb-5">
+            <i class="fa-brands fa-instagram" style="color: white;"></i>
+            <i class="fa-brands fa-twitter" style="color: white;"></i>
+            <i class="fa-brands fa-facebook-f" style="color: white;"></i>
+        </div>
+
+        <p class="md:text-xl text-base font-medium mb-5">@ 2023 Nostra.com</p>
+    </section>
+
+    <script src="collection.js"></script>
+</body>
+
+</html>

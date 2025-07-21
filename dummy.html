@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nostra</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Navigation Bar -->
+  <nav class="flex justify-between items-center p-4 shadow-md">
+    <div class="text-2xl font-bold">Nostra</div>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="#">Home</a></li>
+      <li><a href="#new-arrivals">New Arrival</a></li>
+      <li><a href="#">Most Wanted</a></li>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Other Content... -->
+  <div class="p-8">
+    <h2 class="text-3xl font-bold">We Provide Best Customer Experiences</h2>
+    <!-- Some dummy filler content to allow scrolling -->
+    <div class="h-[500px]"></div>
+  </div>
+
+  <!-- New Arrivals Section -->
+  <section id="new-arrivals" class="p-8 bg-gray-100">
+    <h2 class="text-2xl font-bold mb-4">New Arrivals</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Product cards go here -->
+      <div class="bg-white p-4 rounded shadow">Item 1</div>
+      <div class="bg-white p-4 rounded shadow">Item 2</div>
+      <div class="bg-white p-4 rounded shadow">Item 3</div>
+      <div class="bg-white p-4 rounded shadow">Item 4</div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<script>
+  // script.js
+document.querySelector('a[href="#new-arrivals"]').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('#new-arrivals').scrollIntoView({ behavior: 'smooth' });
+});
+</script>

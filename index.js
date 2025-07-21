@@ -77,11 +77,3 @@ const sliderTrack = document.getElementById('sliderTrack');
     }
   })
 
-  //Most Wanted - LikeButton
-
-  let likeBtn = document.querySelector("likeBtn")
-
-  likeBtn.addEventListener("click", function(){
-    likeBtn.classList.toggle("bg-red-500")
-  })
- 

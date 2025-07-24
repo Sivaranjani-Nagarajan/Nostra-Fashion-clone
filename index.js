@@ -23,16 +23,16 @@ closeNav.addEventListener("click", function(){
 
 //Banner
 
-const sliderTrack = document.getElementById('sliderTrack');
-  const rightArrow = document.getElementById('rightArrow');
-  const leftArrow = document.getElementById('leftArrow');
-  const totalSlides = sliderTrack.children.length;
-  let currentIndex = 0;
+const sliderTrack = document.getElementById('sliderTrack')
+  const rightArrow = document.getElementById('rightArrow')
+  const leftArrow = document.getElementById('leftArrow')
+  const totalSlides = sliderTrack.children.length
+  let currentIndex = 0
 
   function updateSlide() {
-    const slideWidth = sliderTrack.clientWidth;
-    const offset = -currentIndex * slideWidth;
-    sliderTrack.style.transform = `translateX(${offset}px)`;
+    const slideWidth = sliderTrack.clientWidth
+    const offset = -currentIndex * slideWidth
+    sliderTrack.style.transform = `translateX(${offset}px)`
   }
 
   rightArrow.addEventListener('click', () => {
@@ -41,11 +41,11 @@ const sliderTrack = document.getElementById('sliderTrack');
   });
 
   leftArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides
     updateSlide();
   });
 
-  window.addEventListener('resize', updateSlide);
+  window.addEventListener('resize', updateSlide)
 
   
 
@@ -76,4 +76,24 @@ const sliderTrack = document.getElementById('sliderTrack');
     })
     }
   })
+
+  //Like Button
+
+  let likeBtn = document.querySelectorAll(".likeBtn")
+  
+  likeBtn.forEach((btn) => {
+  const heart = btn.querySelector(".heartBtn")
+  let liked = false
+
+  btn.addEventListener("click", () => {
+    liked = !liked;
+
+    if (liked) {
+      heart.classList.add("text-red-600", "fill-red-600")
+    } else {
+      heart.classList.remove("text-red-600", "fill-red-600")
+    }
+  })
+})
+
 

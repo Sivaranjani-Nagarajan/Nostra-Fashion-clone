@@ -56,8 +56,8 @@ const sliderTrack = document.getElementById('sliderTrack')
     const targetSection = document.getElementById("new-arrivals")
 
     if (navNewArrival && targetSection) {
-      navNewArrival.addEventListener("click", function (e) {
-        e.preventDefault()
+      navNewArrival.addEventListener("click", function (event) {
+        event.preventDefault()
         targetSection.scrollIntoView({ behavior: "smooth" })
       })
     }
